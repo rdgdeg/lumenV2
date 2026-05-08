@@ -34,17 +34,17 @@ export default function IntroductionSection() {
 
         <ScrollReveal delay={0.6}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            <div className="rounded-xl p-8 transition-all duration-400 ease-out" style={cardStyle(h1)} onMouseEnter={() => setH1(true)} onMouseLeave={() => setH1(false)}>
+            <div className="rounded-2xl p-8 transition-all duration-400 ease-out border" style={{ ...cardStyle(h1), borderColor: "var(--border-divider)" }} onMouseEnter={() => setH1(true)} onMouseLeave={() => setH1(false)}>
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: "var(--bg-primary)" }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ color: "var(--accent-light)" }} stroke="currentColor" strokeWidth="1.2">
                   <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
                 </svg>
               </div>
               <h3 className="font-display text-xl font-medium" style={{ color: "var(--text-primary)" }}>Nos prestations</h3>
-              <p className="font-body text-sm font-normal leading-relaxed mt-3" style={{ color: "var(--text-secondary)" }}>
+              <p className="font-body text-base font-normal leading-relaxed mt-3" style={{ color: "var(--text-secondary)" }}>
                 Funerarium - Transferts - Incineration - Inhumation - Redaction de necrologie & souvenirs - Articles funeraires - Fleurs artificielles et naturelles - Monuments & Caveaux
               </p>
-              <a href="#prestations" className="inline-flex items-center gap-1 mt-4 font-display text-[13px] font-medium transition-colors" style={{ color: "var(--link)" }}
+              <a href="#prestations" className="inline-flex items-center gap-1 mt-4 font-display text-[17px] font-medium transition-colors" style={{ color: "var(--link)" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--link-hover)"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--link)"; }}>
                 <span>Decouvrir nos prestations</span>
@@ -52,17 +52,17 @@ export default function IntroductionSection() {
               </a>
             </div>
 
-            <div className="rounded-xl p-8 transition-all duration-400 ease-out" style={cardStyle(h2)} onMouseEnter={() => setH2(true)} onMouseLeave={() => setH2(false)}>
+            <div className="rounded-2xl p-8 transition-all duration-400 ease-out border" style={{ ...cardStyle(h2), borderColor: "var(--border-divider)" }} onMouseEnter={() => setH2(true)} onMouseLeave={() => setH2(false)}>
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: "var(--bg-primary)" }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ color: "var(--accent-light)" }} stroke="currentColor" strokeWidth="1.2">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                 </svg>
               </div>
               <h3 className="font-display text-xl font-medium" style={{ color: "var(--text-primary)" }}>Condoleances</h3>
-              <p className="font-body text-sm font-normal leading-relaxed mt-3" style={{ color: "var(--text-secondary)" }}>
+              <p className="font-body text-base font-normal leading-relaxed mt-3" style={{ color: "var(--text-secondary)" }}>
                 Vous souhaitez laisser un temoignage de sympathie a l&apos;egard des proches d&apos;un defunt ? Presentez vos condoleances en ligne.
               </p>
-              <a href="#condoleances" className="inline-flex items-center gap-1 mt-4 font-display text-[13px] font-medium transition-colors" style={{ color: "var(--link)" }}
+              <a href="#condoleances" className="inline-flex items-center gap-1 mt-4 font-display text-[17px] font-medium transition-colors" style={{ color: "var(--link)" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--link-hover)"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--link)"; }}>
                 <span>Presenter ses condoleances</span>

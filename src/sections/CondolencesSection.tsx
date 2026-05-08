@@ -33,7 +33,16 @@ export default function CondolencesSection() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          <button
+            onClick={() => navigate("/condoleances")}
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 transition-all duration-300"
+            style={{ color: "var(--btn-text)", backgroundColor: "var(--btn-bg)" }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "var(--btn-hover)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "var(--btn-bg)"; }}
+          >
+            <span className="font-display text-sm font-semibold uppercase tracking-[0.09em]">Voir tous les avis de deces</span>
+          </button>
           <button
             onClick={() => navigate("/admin")}
             className="flex items-center gap-2 rounded-full px-5 py-2.5 transition-all duration-300"

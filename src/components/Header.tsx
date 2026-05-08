@@ -77,7 +77,7 @@ export default function Header() {
         </button>
 
         {/* Desktop Nav - hidden on small screens, flex on lg+ */}
-        <nav className="hidden lg:flex items-center gap-5">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link, i) => (
             <motion.a
               key={link.href}
@@ -86,7 +86,7 @@ export default function Header() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-              className="font-display text-[13px] font-medium uppercase tracking-[0.08em] transition-colors duration-300 hover:text-[var(--accent)] relative pb-1.5 whitespace-nowrap"
+              className="font-display text-[15px] font-semibold uppercase tracking-[0.07em] transition-colors duration-300 hover:text-[var(--accent)] relative pb-1.5 whitespace-nowrap"
               style={{ color: activeSection === link.href.replace("#", "") ? "var(--accent)" : "var(--text-light)", cursor: "pointer" }}
             >
               {link.label}

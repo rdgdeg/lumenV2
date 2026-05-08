@@ -30,12 +30,14 @@ export default function ContactSection() {
               <h2 className="font-display text-[28px] md:text-[36px] font-normal mt-1" style={{ color: "var(--text-primary)" }}>Notre localisation</h2>
               <DecorativeDivider />
             </div>
-            <div className="w-full h-[300px] md:h-[380px] overflow-hidden rounded-2xl shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.4978248129!2d3.7784!3d50.6278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2fa3d9a2e7c6b%3A0x9b8b3c4d5e6f7a8b!2sChauss%C3%A9e%20de%20Mons%2C%207810%20Maffle!5e0!3m2!1sfr!2sbe!4v1700000000000!5m2!1sfr!2sbe"
-                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade" title="Pompes Funebres Lumen - Localisation"
-              />
+            <div className="max-w-[960px] mx-auto rounded-2xl border p-3 md:p-4" style={{ borderColor: "var(--border-divider)", backgroundColor: "var(--bg-secondary)" }}>
+              <div className="w-full h-[280px] md:h-[360px] overflow-hidden rounded-xl shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.4978248129!2d3.7784!3d50.6278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2fa3d9a2e7c6b%3A0x9b8b3c4d5e6f7a8b!2sChauss%C3%A9e%20de%20Mons%2C%207810%20Maffle!5e0!3m2!1sfr!2sbe!4v1700000000000!5m2!1sfr!2sbe"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade" title="Pompes Funebres Lumen - Localisation"
+                />
+              </div>
             </div>
             <div className="text-center mt-4">
               <a href="https://www.google.com/maps/dir//Chauss%C3%A9e+de+Mons,+7810+Maffle" target="_blank" rel="noopener noreferrer"
@@ -69,7 +71,7 @@ export default function ContactSection() {
                 </div>
               </ScrollReveal>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 mt-8 p-6 md:p-8 rounded-2xl" style={{ backgroundColor: "var(--bg-card)", boxShadow: "0 2px 16px var(--shadow-card)" }}>
+              <form onSubmit={handleSubmit} className="space-y-4 mt-8 p-6 md:p-8 rounded-2xl border" style={{ backgroundColor: "var(--bg-card)", boxShadow: "0 2px 16px var(--shadow-card)", borderColor: "var(--border-divider)" }}>
                 {[
                   { name: "nom", label: "Nom", type: "text", req: true },
                   { name: "prenom", label: "Prenom", type: "text", req: true },
@@ -116,7 +118,7 @@ export default function ContactSection() {
             )}
           </div>
 
-          <div className="space-y-8 lg:pt-20">
+          <div className="space-y-6 lg:pt-20">
             {[
               { icon: (<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>), label: "Adresse", lines: ["Chaussee de Mons, 473/B", "7810 Maffle"] },
               { icon: (<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>), label: "Telephone", lines: ["068/28.72.51", "0475/89.28.17 (apres 18h30)"] },
@@ -124,7 +126,7 @@ export default function ContactSection() {
               { icon: (<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>), label: "Email", lines: ["info@pompesfunebreslumen.be"], isLink: true },
             ].map((block, i) => (
               <ScrollReveal key={block.label} direction="right" delay={0.3 + i * 0.15}>
-                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: "var(--bg-card)", boxShadow: "0 2px 12px var(--shadow-card)" }}>
+                <div className="flex items-start gap-4 p-5 rounded-2xl border" style={{ backgroundColor: "var(--bg-card)", boxShadow: "0 2px 12px var(--shadow-card)", borderColor: "var(--border-divider)" }}>
                   <div className="flex-shrink-0 mt-0.5">{block.icon}</div>
                   <div>
                     <p className="font-body text-[11px] font-medium uppercase tracking-[0.1em]" style={{ color: "var(--text-muted)" }}>{block.label}</p>
