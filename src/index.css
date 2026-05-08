@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import '@fontsource/cormorant-garamond/300.css';
+@import '@fontsource/cormorant-garamond/300-italic.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/montserrat/300.css';
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/500.css';
+@import '@fontsource/montserrat/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 37 38% 90%;
+    --foreground: 25 14% 21%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 14% 21%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 14% 21%;
+    --primary: 25 15% 36%;
+    --primary-foreground: 37 38% 90%;
+    --secondary: 33 16% 48%;
+    --secondary-foreground: 37 38% 90%;
+    --muted: 37 33% 95%;
+    --muted-foreground: 25 12% 34%;
+    --accent: 37 33% 69%;
+    --accent-foreground: 25 15% 36%;
+    --destructive: 12 33% 47%;
+    --destructive-foreground: 37 38% 90%;
+    --border: 33 16% 48%;
+    --input: 33 16% 48%;
+    --ring: 25 15% 36%;
+    --radius: 0;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+    /* Warm theme (default) */
+    --bg-primary: #f0e6d4;
+    --bg-secondary: #e8ddd0;
+    --bg-card: #ffffff;
+    --bg-header: #685a4e;
+    --bg-input: #faf6f0;
+    --text-primary: #3d352e;
+    --text-secondary: #5c5046;
+    --text-light: #f0e6d4;
+    --text-muted: #8c7b6b;
+    --accent: #c9b89a;
+    --accent-light: #d9c9ad;
+    --accent-medium: #8c7b6b;
+    --border-color: rgba(140, 123, 107, 0.2);
+    --border-divider: rgba(140, 123, 107, 0.15);
+    --shadow-card: rgba(61, 53, 46, 0.06);
+    --shadow-card-hover: rgba(61, 53, 46, 0.12);
+    --hero-overlay: rgba(61, 53, 46, 0.3);
+    --error: #a06050;
+    --success: #7a8a6a;
+    --btn-bg: #685a4e;
+    --btn-text: #f0e6d4;
+    --btn-hover: #8c7b6b;
+    --btn-primary-bg: #685a4e;
+    --btn-primary-hover: #807063;
+    --btn-primary-text: #f0e6d4;
+    --btn-outline-border: #8c7b6b;
+    --btn-outline-text: #685a4e;
+    --link: #685a4e;
+    --link-hover: #8c7b6b;
+    --link-color: #685a4e;
+    --table-header: #685a4e;
+    --table-header-text: #f0e6d4;
+    --table-row-alt: #faf6f0;
+    --table-row-hover: #f0e6d4;
+    --modal-backdrop: rgba(61, 53, 46, 0.5);
+    --theme-toggle-bg: rgba(240, 230, 212, 0.15);
+    --theme-toggle-hover: rgba(240, 230, 212, 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Dark theme */
+  .theme-dark {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --bg-card: #1e1e1e;
+    --bg-header: #0a0a0a;
+    --bg-input: #242424;
+    --text-primary: #e8e4df;
+    --text-secondary: #a8a29e;
+    --text-light: #e8e4df;
+    --text-muted: #8a7f72;
+    --accent: #8a7f72;
+    --accent-light: #a89f94;
+    --accent-medium: #6b5f52;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-divider: rgba(255, 255, 255, 0.06);
+    --shadow-card: rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: rgba(0, 0, 0, 0.5);
+    --hero-overlay: rgba(0, 0, 0, 0.5);
+    --error: #c4756b;
+    --success: #8a9e7a;
+    --btn-bg: #8a7f72;
+    --btn-text: #121212;
+    --btn-hover: #a89f94;
+    --btn-primary-bg: #8a7f72;
+    --btn-primary-hover: #b8aea2;
+    --btn-primary-text: #121212;
+    --btn-outline-border: #8a7f72;
+    --btn-outline-text: #a89f94;
+    --link: #a89f94;
+    --link-hover: #c9b89a;
+    --link-color: #c9b89a;
+    --table-header: #1e1e1e;
+    --table-header-text: #e8e4df;
+    --table-row-alt: #1a1a1a;
+    --table-row-hover: #242424;
+    --modal-backdrop: rgba(0, 0, 0, 0.7);
+    --theme-toggle-bg: rgba(255, 255, 255, 0.08);
+    --theme-toggle-hover: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+  .container-main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 768px) {
+    .container-main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .surface-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-divider);
+    box-shadow: 0 6px 24px var(--shadow-card);
+  }
+
+  .interactive-lift {
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .interactive-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 34px var(--shadow-card-hover);
+  }
+}
